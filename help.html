@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Help & Support</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><img src="C:\Users\hp\Downloads\Logo_Bhumiputra.png" alt="Bhumiputra Logo"></div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="help">
+        <h2>Help & Support</h2>
+        <div class="button-container">
+            <button class="help-button" onclick="toggleDetails('TechnicalIssues')">Technical Issues</button>
+            <button class="help-button" onclick="toggleDetails('FinancialIssues')">Financial Issues</button>
+            <button class="help-button" onclick="toggleDetails('ServiceIssues')">Service Issues</button>
+        </div>
+
+        <!-- Sub-menu for Technical Issues -->
+        <section id="TechnicalIssues" class="sub-option-description">
+            <h2>Technical Issues</h2>
+            <ul>
+                <li>
+                    <a class="sub-menu-item" href="#conveyornotworking">Conveyor not Working</a>
+                    <div id="conveyornotworking" class="sub-option-description">
+                        <p>Please verify if the Motor is working or not, if yes, please check if there is any presence of dirt or mud particles under the rollers or belt sliding.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapBeltnotmoving" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapBeltnotmoving', 'beltnotmoving')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#beltnotmoving">Belt not Moving</a>
+                    <div id="beltnotmoving" class="sub-option-description">
+                        <p>Please verify if the Motor is working or not, if yes, please check if there is any presence of dirt or mud particles under the rollers or belt sliding.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapBeltnotmoving" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapBeltnotmoving', 'beltnotmoving')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#motornotworking">Motor Not Working</a>
+                    <div id="motornotworking" class="sub-option-description">
+                        <p>Please verify if your power supply is active, or if your battery is properly charged.</p>
+                        <p>If not, please charge your battery again and test again, if still not resolved please visit the nearby Service Centre.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapMotornotworking" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapMotornotworking', 'motornotworking')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#beltisslipping">Belt is Slipping</a>
+                    <div id="beltisslipping" class="sub-option-description">
+                        <p>Please verify if the conveyor is mounted with limited load, make sure no excessive load is mounted.</p>
+                        <p>If still the problem is occurring, inspect the tightening of coupling of motor to roller.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapBeltisslipping" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapBeltisslipping', 'beltisslipping')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#beltmovingwithdrag">Belt moving with Drag</a>
+                    <div id="beltmovingwithdrag" class="sub-option-description">
+                        <p>Please check the following:</p>
+                        <p>1. Battery is properly charged.</p>
+                        <p>2. No excessive load is present on the belt.</p>
+                        <p>3. Rollers and bearings are properly lubricated.</p>
+                        <p>4. Belt is properly tensioned.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapBeltmovingwithdrag" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapBeltmovingwithdrag', 'beltmovingwithdrag')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#excessivevibration">Excessive Vibrations</a>
+                    <div id="excessivevibration" class="sub-option-description">
+                        <p>Please verify the following:</p>
+                        <p>1. Presence of damage or shearing on conveyor frame, if yes immediately contact the nearest service station.</p>
+                        <p>2. There is no excessive load mounted unevenly on the conveyor frame.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapExcessivevibration" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapExcessivevibration', 'excessivevibration')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+            </ul>
+            <li>
+                <a class="sub-menu-item" href="#roboticarmnotworking">Robotic Arm Not Working</a>
+                <div id="roboticarmnotworking" class="sub-option-description"></div>
+            </li>
+            <ul>
+                <li>
+                    <a class="sub-menu-item" href="#gripperisnotworking">Gripper is not Working</a>
+                    <div id="gripperisnotworking" class="sub-option-description">
+                        <p>Please Verify the Followings:</p>
+                        <p>1. All the wires are Properly connected.</p>
+                        <p>2. Gripper is not damaged.</p>
+                        <p>3. Battery is properly charged.</p>
+                        <p>4. Motors are working properly.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapGripperisnotworking" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapGripperisnotworking', 'gripperisnotworking')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#gripperisdamaged">Gripper is Damaged</a>
+                    <div id="gripperisdamaged" class="sub-option-description">
+                        <p>Please Verify the Followings:</p>
+                        <p>1. If the motors and wires are also damaged.</p>
+                        <p>2. If damaged component is not available in Spare kit.</p>
+                        <p>Either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapGripperisdamaged" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapGripperisdamaged', 'gripperisdamaged')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#anylinkisdamaged">Any Link is Damaged</a>
+                    <div id="anylinkisdamaged" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapAnylinkisdamaged " class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapAnylinkisdamaged', 'anylinkisdamaged')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#wireharnessisdamaged">Wire Harness is Damaged</a>
+                    <div id="wireharnessisdamaged" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapWireharnessisdamaged" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapWireharnessisdamaged', 'wireharnessisdamaged')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#unevenalignment">Uneven Alignment</a>
+                    <div id="unevenalignment" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapUnevenalignment" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapUnevenalignment', 'unevenalignment')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+            </ul>
+            <li>
+                <a class="sub-menu-item" href="#issueinpowersupply">Issue in Power Supply</a>
+                <div id="issueinpowersupply" class="sub-option-description"></div>
+            </li>
+            <ul>
+                <li>
+                    <a class="sub-menu-item" href="#batteryleakage">Battery Leakage</a>
+                    <div id="batteryleakage" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapBatteryleakage" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapBatteryleakage', 'batteryleakage')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#wireharnessisdamaged">Wire Harness is Damaged</a>
+                    <div id="wireharnessisdamaged" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapWireharnessisdamaged" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapWireharnessisdamaged', 'wireharnessisdamaged')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#issueincharging">Issue in Charging</a>
+                    <div id="issueincharging" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapIssueincharging" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapIssueincharging', 'issueincharging')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#damageofcomponent">Damage of Component</a>
+                    <div id="damageofcomponent" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapDamageofcomponent" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapDamageofcomponent', 'damageofcomponent')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#deflectioninflame">Deflection in Flame</a>
+                    <div id="deflectioninflame" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapDeflectioninflame" class="map-container" style="height: 400px;"></div>
+ <button onclick="findServiceCenters('mapDeflectioninflame', 'deflectioninflame')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sub-menu for Financial Issues -->
+        <section id="FinancialIssues" class="sub-option-description">
+            <h2>Financial Issues</h2>
+            <ul>
+                <li>
+                    <a class="sub-menu-item" href="#loanrelatedquery">Loan Related Query</a>
+                    <div id="loanrelatedquery" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapLoanrelatedquery" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapLoanrelatedquery', 'loanrelatedquery')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#costdetails">Cost Details</a>
+                    <div id="costdetails" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapCostdetails" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapCostdetails', 'costdetails')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#explorepaymentschemes">Explore Payment Schemes</a>
+                    <div id="explorepaymentschemes" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapExplorepaymentschemes" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapExplorepaymentschemes', 'explorepaymentschemes')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sub-menu for Service Issues -->
+        <section id="ServiceIssues" class="sub-option-description">
+            <h2>Service Issues</h2>
+            <ul>
+                <li>
+                    <a class="sub-menu-item" href="#bookyourservicing">Book your Servicing</a>
+                    <div id="bookyourservicing" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapBookyourservicing" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapBookyourservicing', 'bookyourservicing')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+                <li>
+                    <a class="sub-menu-item" href="#enquireservicedetails">Enquire Service Details</a>
+                    <div id="enquireservicedetails" class="sub-option-description">
+                        <p>In this case, either Contact with us by visiting contact option or else find nearby Service Centre.</p>
+                        <div id="mapEnquireservicedetails" class="map-container" style="height: 400px;"></div>
+                        <button onclick="findServiceCenters('mapEnquireservicedetails', 'enquireservicedetails')">Find Nearby Service Centers</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <footer>
+        <p>© 2024 Automated Multi-Vegetable Transplanter. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

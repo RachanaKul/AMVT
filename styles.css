@@ -1,0 +1,286 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #121212;
+}
+
+/* Glassy Navigation Bar Styling */
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+nav .logo img {
+    width: 100px;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a8d5e2;
+}
+
+nav .menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Navigation Bar */
+@media (max-width: 768px 
+) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav .menu-btn {
+        display: block;
+    }
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Bento Grid Styling */
+.bento-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.bento-item {
+    display: none; /* Hide all items initially */
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Fade effect */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.bento-item.active {
+    display: flex; /* Show the active item */
+    opacity: 1; /* Fully visible */
+}
+
+.bento-item img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.bento-item .info {
+    flex: 1;
+    color: #fff;
+}
+
+.bento-item h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bento-item p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.bento-item button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.bento-item button:hover {
+    background: linear-gradient(135deg, #66BB6A, #43A047);
+    transform: scale(1.05);
+}
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.grid-item {
+    background: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(30% - 2rem); /* Adjust width to control how many items per row */
+transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.info {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.info h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+section#help {
+    text-align: center;
+    padding: 2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.help-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.help-button:hover {
+    background-color: #218838;
+}
+.sub-option-description {
+    display: none; /* Hide by default */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    background-color: #f9f9f9;}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    background: #1E1E1E;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
